@@ -39,10 +39,10 @@
 		<div id="output-container"></div>
 		
 		<div id="buttons-container">
-			<button id="plus">+</button>
-			<button id="subtraction">-</button>
-			<button id="multiply">*</button>
-			<button id="divide">%</button>
+			<button onclick="plus()" id="plus">+</button>
+			<button onclick="subtract()" id="subtraction">-</button>
+			<button onclick="multiply()" id="multiply">*</button>
+			<button onclick="divide()" id="divide">%</button>
 			<button id="exp">Exp</button>
 			<button id="log">Log</button>
 			<button id="sqrt">Sqrt</button>
@@ -52,37 +52,60 @@
 <script>
 	// Display the output in the output-container
 	function show_output(value) {
-	
+		
+		document.getElementById("output-container").innerHTML = value;
+		
 	}
 	
 	// Takes two numbers and returns the sum
-	function plus(n1, n2) {
-	
-	}
+	function plus() {
+		var n1 = document.getElementById("value1").value;
+		var n2 = document.getElementById("value2").value;
+		
+		show_output(parseInt(n1) + parseInt(n2));
+		}
 	
 	function subtract() {
-	
+		var n1 = document.getElementById("value1").value;
+		var n2 = document.getElementById("value2").value;
+		
+		show_output(parseInt(n1) - parseInt(n2));
 	}
 	
 	function multiply() {
-	
+		var n1 = document.getElementById("value1").value;
+		var n2 = document.getElementById("value2").value;
+		
+		show_output(parseInt(n1) * parseInt(n2));
 	}
 	
 	function divide() {
-	
+		var n1 = document.getElementById("value1").value;
+		var n2 = document.getElementById("value2").value;
+		
+		show_output(parseInt(n1) / parseInt(n2));
 	}
 	
 	function exp() {
-	
+		var n1 = document.getElementById("value1").value;
+		var n2 = document.getElementById("value2").value;
+		
+		show_output(parseInt(n1) % parseInt(n2));
 	}
 	
 	function loga() {
-	
+		var n1 = document.getElementById("value1").value;
+		var n2 = document.getElementById("value2").value;
+		
+		show_output(parseInt(n1) Math parseInt(n2));
 	}
 	
 	function squareroot() {
-	
-	}
+		var n1 = document.getElementById("value1").value;
+		var n2 = document.getElementById("value2").value;
+		
+		show_output(parseInt(n1) Math.sqrt(n1) parseInt(n2));
+	}*/
 </script>
 
 </body>
